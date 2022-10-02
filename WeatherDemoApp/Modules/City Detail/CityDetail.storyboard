@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--City Detail View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="CityDetailViewController" id="Y6W-OH-hqX" customClass="CityDetailViewController" customModule="WeatherDemoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="YKg-lc-QhL">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p5l-HR-Ii3">
+                                <rect key="frame" x="8" y="44" width="48" height="38"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HhW-Oz-B5G">
+                                        <rect key="frame" x="0.0" y="0.0" width="48" height="38"/>
+                                        <inset key="imageEdgeInsets" minX="12" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" image="arrowLeftIcon"/>
+                                        <connections>
+                                            <action selector="onBackButtonAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="xwT-HI-FGo"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.5958260037251657" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="HhW-Oz-B5G" secondAttribute="trailing" id="6a6-av-dkd"/>
+                                    <constraint firstAttribute="width" constant="48" id="6hm-WS-WMh"/>
+                                    <constraint firstAttribute="height" constant="38" id="7Er-5j-hN0"/>
+                                    <constraint firstItem="HhW-Oz-B5G" firstAttribute="leading" secondItem="p5l-HR-Ii3" secondAttribute="leading" id="Atg-RJ-6JZ"/>
+                                    <constraint firstItem="HhW-Oz-B5G" firstAttribute="top" secondItem="p5l-HR-Ii3" secondAttribute="top" id="NEc-bL-riF"/>
+                                    <constraint firstAttribute="bottom" secondItem="HhW-Oz-B5G" secondAttribute="bottom" id="rWB-1t-vvo"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="p5l-HR-Ii3" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="Djp-Qb-XJL"/>
+                            <constraint firstItem="YKg-lc-QhL" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="Esz-IC-YSY"/>
+                            <constraint firstAttribute="bottom" secondItem="YKg-lc-QhL" secondAttribute="bottom" id="FxK-VC-Eke"/>
+                            <constraint firstItem="YKg-lc-QhL" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="Mls-rn-srQ"/>
+                            <constraint firstItem="p5l-HR-Ii3" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="8" id="eas-Q6-eAZ"/>
+                            <constraint firstItem="YKg-lc-QhL" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="n6G-W0-vf3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backView" destination="p5l-HR-Ii3" id="oDp-F9-fHT"/>
+                        <outlet property="tableView" destination="YKg-lc-QhL" id="MQG-FX-L4M"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-39.130434782608695" y="28.794642857142854"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrowLeftIcon" width="24" height="24"/>
+    </resources>
+</document>
